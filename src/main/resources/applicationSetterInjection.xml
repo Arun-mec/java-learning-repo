@@ -4,7 +4,11 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="newBean" class="com.example.bean.NewBean">
-        <property name="message" value="No message" />
+    <bean id="carSpecification" class="car.setter.injection.Specification">
+        <property name="make" value="Toyota" />
+        <property name="model" value="Corolla" />
+    </bean>
+    <bean id="currCar" class="car.setter.injection.Car">
+        <property name="specification" ref="carSpecification"/>
     </bean>
 </beans>

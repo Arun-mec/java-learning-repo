@@ -1,6 +1,6 @@
 package com.example.bean;
 
-public class newBean {
+public class NewBean {
     public String message;
 
     public void setMessage(String message) {

@@ -4,7 +4,9 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="newBean" class="com.example.bean.NewBean">
-        <property name="message" value="No message" />
+    <bean id="specification" class="car.autowire.byname.Specification">
+        <property name="make" value="Toyota" />
+        <property name="model" value="Corolla" />
     </bean>
+    <bean id="newCar" class="car.autowire.byname.Car" autowire="byName" ></bean>
 </beans>

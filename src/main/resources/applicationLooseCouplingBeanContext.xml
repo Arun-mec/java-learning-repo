@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="userDatabase" class="com.loose.coupling.bean.UserDatabase">
+    </bean>
+
+    <bean id="mongoDatabase" class="com.loose.coupling.bean.MongoDatabase">
+    </bean>
+
+    <bean id="userManager" class="com.loose.coupling.bean.UserManager">
+        <constructor-arg ref="userDatabase" />
+    </bean>
+
+    <bean id="mongoManager" class="com.loose.coupling.bean.UserManager">
+        <constructor-arg ref="mongoDatabase" />
+    </bean>
+</beans>
